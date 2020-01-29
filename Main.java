@@ -1,6 +1,8 @@
 import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
+
+
 public class Main
 {
     public static void main(String[] args)
@@ -93,20 +95,40 @@ public class Main
         int car_type=1;
         car_type=s.nextInt();
         int book_confirm=0;
+        feedback e=new feedback(0,0,0);
+        Ftake f=new Ftake();
         while(book_confirm!=1)
         {
             int pos=0;
             int value_correct=0;
+
             switch(car_type)
             {
             case 1: book_confirm=Micro.ui(cars_micro,obj,dri,uid,value_correct,pos,book_confirm);
+                    
+                    f.Takefeedback(e);
+                    f.Showfeedback(e);
+                    Database.CArray[uid].feeddata=(Database.CArray[uid].feeddata*Database.CArray[uid].nfeed+(e.overall))/(Database.CArray[uid].nfeed+1);
+                    Database.CArray[uid].nfeed=Database.CArray[uid].nfeed+1;
+                    System.out.println("Your aggregate feedback:"+Database.CArray[uid].feeddata);
                     break;
                    
                     
             case 2: book_confirm=Mini.ui(cars_mini,obj,dri,uid,value_correct,pos,book_confirm);
+                                        
+                    f.Takefeedback(e);
+                    f.Showfeedback(e);
+                    Database.CArray[uid].feeddata=(Database.CArray[uid].feeddata*Database.CArray[uid].nfeed+(e.overall))/(Database.CArray[uid].nfeed+1);
+                    Database.CArray[uid].nfeed=Database.CArray[uid].nfeed+1;
+                    System.out.println("Your aggregate feedback:"+Database.CArray[uid].feeddata);
                     break;
 
             case 3: book_confirm=Prime.ui(cars_prime,obj,dri,uid,value_correct,pos,book_confirm);
+                    f.Takefeedback(e);
+                    f.Showfeedback(e);
+                    Database.CArray[uid].feeddata=(Database.CArray[uid].feeddata*Database.CArray[uid].nfeed+(e.overall))/(Database.CArray[uid].nfeed+1);
+                    Database.CArray[uid].nfeed=Database.CArray[uid].nfeed+1;
+                    System.out.println("Your aggregate feedback:"+Database.CArray[uid].feeddata);
                     break;
 
             case 4: book_confirm=1;
@@ -123,3 +145,4 @@ public class Main
 
     }
 }
+

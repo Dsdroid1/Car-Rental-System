@@ -4,6 +4,8 @@ public class Customer extends Person
     String Username;
     String Password;
     Customer[] CArray = new Customer[4];
+    float feeddata=0;
+    int nfeed=0;
     Customer(String Name,String Mobile_no,String  Username,String Email,String Password)
     {
         this.Name = Name;

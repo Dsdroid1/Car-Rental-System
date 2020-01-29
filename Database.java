@@ -7,6 +7,10 @@ public class Database
         CArray[0] = new Customer("Dhruv Sharma","9404341118","1324","dhruvsharma2031@gmail.com","abc123");
         CArray[1] = new Customer("Nitin Wartkar","8149334232","1556","nitinwartkar58@gmail.com","nitin1");
         CArray[2] = new Customer("Omega Warrior","9876514586","1132","crazy@omega.warrior","blastoff");
+        CArray[0].feeddata=4;CArray[0].nfeed=3;
+        CArray[0].feeddata=3;CArray[0].nfeed=4;
+        CArray[0].feeddata=4;CArray[0].nfeed=5;
+
     }
     public static void Append()
     {
