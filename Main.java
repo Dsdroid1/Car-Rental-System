@@ -5,10 +5,11 @@ import java.util.Scanner;
 
 public class Main
 {
+    static int part_1=0;
     public static void main(String[] args)
     {
         Database.data();
-        int part_1=0;
+        
         Scanner s = new Scanner(System.in);
        // Database.Display(Database.CArray);
         while(part_1==0)
@@ -21,7 +22,7 @@ public class Main
             if(temp == 1)
             {
                 Login.TakeInput();
-                part_1=1;
+                //part_1=1;
                 
             }
             else
