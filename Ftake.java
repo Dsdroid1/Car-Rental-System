@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import feedback.feedback;
 interface feedback_setup
 {
     int max_rating=5;
