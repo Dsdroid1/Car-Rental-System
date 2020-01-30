@@ -19,27 +19,27 @@ class Ftake implements feedback_setup
         System.out.println("------------------------------------------");
         System.out.println("1.How was our user interface(from "+min_rating+"-"+max_rating+"):");
         e.f1=s.nextInt();
-        while(e.f1<0||e.f1>5)
+        while(e.f1<min_rating||e.f1>max_rating)
         {
             System.out.println("Please enter valid number!!");
             e.f1=s.nextInt();
         }
         System.out.println("2.How helpful was this app to you:(from "+min_rating+"-"+max_rating+"):");
         e.f2=s.nextInt();
-        while(e.f2<0||e.f2>5)
+        while(e.f2<min_rating||e.f2>max_rating)
         {
             System.out.println("Please enter valid number!!");
             e.f2=s.nextInt();
         }
         System.out.println("3.How likely are you to recommend us to a friend(from "+min_rating+"-"+max_rating+"):");
         e.f3=s.nextInt();
-        while(e.f3<0||e.f3>5)
+        while(e.f3<min_rating||e.f3>max_rating)
         {
             System.out.println("Please enter valid number!!");
             e.f3=s.nextInt();
         }
         System.out.println("Thank You!Your feedback has been recorded!");
-        e.overall=(e.f1+e.f2+e.f3)/3;
+        e.overall=(float)(e.f1+e.f2+e.f3)/3;
     
     }
     public void Showfeedback(feedback e)
