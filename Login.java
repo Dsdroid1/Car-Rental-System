@@ -20,7 +20,11 @@ public class Login
                 if(Pswd.equals(c[i].Password))
                 {
                     System.out.println("Login Successful");//dhruv's next
+<<<<<<< HEAD
                     Main.part_1=1;
+=======
+                    Main.part_1 = 1;
+>>>>>>> c974832887a0fec673495c700888ac329ece7921
                     flag = 1;
                     pos_in_db=i;
                 }

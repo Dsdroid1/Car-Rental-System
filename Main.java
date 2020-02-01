@@ -22,7 +22,11 @@ public class Main
             if(temp == 1)
             {
                 Login.TakeInput();
+<<<<<<< HEAD
                
+=======
+                //part_1=1;
+>>>>>>> c974832887a0fec673495c700888ac329ece7921
                 
             }
             else
