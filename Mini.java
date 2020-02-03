@@ -1,3 +1,4 @@
+#fgt
 import java.util.Scanner;
 public class Mini extends Car{
     
